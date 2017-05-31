@@ -1,0 +1,38 @@
+{
+  "name": "node-app-scaffold",
+  "version": "1.0.0",
+  "description": "Basic scaffolding for a node app",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test *",
+    "build": "webpack",
+    "start": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hgutknecht/node-app-scaffold.git"
+  },
+  "author": "Hans Gutknecht",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hgutknecht/node-app-scaffold/issues"
+  },
+  "homepage": "https://github.com/hgutknecht/node-app-scaffold#readme",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "chai": "^4.0.0",
+    "css-loader": "^0.28.4",
+    "express": "4.15.3",
+    "express-handlebars": "^3.0.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "html-webpack-plugin": "^2.28.0",
+    "istanbul": "^0.4.5",
+    "lodash": "4.17.4",
+    "nodemon": "^1.11.0",
+    "node-sass": "^4.5.3",
+    "redis": "^2.7.1",
+    "sass-loader": "^6.0.5",
+    "style-loader": "^0.18.1",
+    "webpack": "^2.6.1"
+  }
+}
