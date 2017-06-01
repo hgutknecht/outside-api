@@ -68,16 +68,21 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 
 console.log('This is rainbows.js');
 
-
 /***/ }),
 /* 1 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-console.log('Hello, unicorns!')
+"use strict";
+
+
+console.log('Hello, unicorns!');
 
 /***/ }),
 /* 2 */
@@ -87,19 +92,16 @@ console.log('Hello, unicorns!')
 
 /***/ }),
 /* 3 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__scss_base_scss__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__scss_base_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__scss_base_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__js_rainbows_js__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__js_rainbows_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__js_rainbows_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__js_unicorns_js__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__js_unicorns_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__js_unicorns_js__);
 
 
+__webpack_require__(2);
 
+__webpack_require__(0);
+
+__webpack_require__(1);
 
 /***/ })
 /******/ ]);

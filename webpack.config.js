@@ -17,16 +17,16 @@ module.exports = {
 	        use: ['css-loader', 'sass-loader']
 	      })
 	    },
-      // {
-      //   test: /\.js$/,
-      //   exclude: /(node_modules|dist)/,
-      //   use: {
-      //     loader: 'babel-loader',
-      //     options: {
-      //       presets: ['env']
-      //     }
-      //   }
-      // },
+      {
+        test: /\.js$/,
+        exclude: /(node_modules|dist)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['env']
+          }
+        }
+      },
       {
         enforce: 'pre',
         test: /\.js$/,
