@@ -16,8 +16,24 @@ module.exports = {
 	        fallback: 'style-loader',
 	        use: ['css-loader', 'sass-loader']
 	      })
-	    }
-	 ]
+	    },
+      // {
+      //   test: /\.js$/,
+      //   exclude: /(node_modules|dist)/,
+      //   use: {
+      //     loader: 'babel-loader',
+      //     options: {
+      //       presets: ['env']
+      //     }
+      //   }
+      // },
+      {
+        enforce: 'pre',
+        test: /\.js$/,
+        exclude: /(node_modules|dist)/,
+        loader: 'eslint-loader',
+      },
+    ]
 	},
   plugins: [
     new ExtractTextPlugin('style.css')

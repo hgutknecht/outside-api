@@ -1,1 +1,1 @@
-console.log('This is rainbows.js')
+console.log('This is rainbows.js');
