@@ -4,12 +4,21 @@ const path = require('path');
 module.exports = {
   // Webpack static app
   entry: './public/app.js',
+
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
+
+
 	module: {
 	  rules: [
+      {
+        enforce: 'pre',
+        test: /\.scss$/,
+        loader: 'sasslint-loader',
+        exclude: /(node_modules)/,
+      },
 	    {
 	      test: /\.scss$/,
 	      use: ExtractTextPlugin.extract({
