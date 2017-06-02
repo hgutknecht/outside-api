@@ -38,8 +38,8 @@
     "nodemon": "^1.11.0",
     "redis": "^2.7.1",
     "sass-loader": "^6.0.5",
-    "sasslint-loader": "0.0.1",
     "style-loader": "^0.18.1",
+    "stylelint-webpack-plugin": "^0.7.0",
     "webpack": "^2.6.1"
   }
 }

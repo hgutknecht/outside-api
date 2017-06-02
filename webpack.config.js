@@ -1,5 +1,6 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
   // Webpack static app
@@ -10,15 +11,8 @@ module.exports = {
     filename: 'bundle.js'
   },
 
-
 	module: {
 	  rules: [
-      {
-        enforce: 'pre',
-        test: /\.scss$/,
-        loader: 'sasslint-loader',
-        exclude: /(node_modules)/,
-      },
 	    {
 	      test: /\.scss$/,
 	      use: ExtractTextPlugin.extract({
@@ -44,7 +38,10 @@ module.exports = {
       },
     ]
 	},
+
   plugins: [
-    new ExtractTextPlugin('style.css')
+    new ExtractTextPlugin('style.css'),
+    new StyleLintPlugin({}),
   ]
+
 };
