@@ -12,16 +12,20 @@ app.set('view engine', '.hbs');
 // Expose static files and compiles webpack bundles.
 app.use(express.static('dist'));
 
-// Routes
+// Node app mocha/chia test example.
+const shouldTestThis = (x, y) => {
+	return [y, x];
+}
 
-// Express hello.
+// Routes - Express the hello sentiment.
 app.get('/hello', function (req, res) {
   res.send('Hello World!');
 });
 
 // Basic handlebar routing.
 app.get('/', function (req, res) {
-    res.render('home');
+  console.log(shouldTestThis('Hans. WOW', 'Such'));
+  res.render('home');
 });
 
 app.listen(3000, function () {
