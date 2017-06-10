@@ -1,7 +1,8 @@
 const express = require('express');
 const exphbs  = require('express-handlebars');
-const app = express();
+const unirest  = require('unirest');
 const _ = require('lodash');
+const app = express();
 
 app.engine('.hbs', exphbs({
   extname: '.hbs',
@@ -12,20 +13,17 @@ app.set('view engine', '.hbs');
 // Expose static files and compiles webpack bundles.
 app.use(express.static('dist'));
 
-// Node app mocha/chia test example.
-const shouldTestThis = (x, y) => {
-	return [y, x];
-}
-
-// Routes - Express the hello sentiment.
-app.get('/hello', function (req, res) {
-  res.send('Hello World!');
-});
-
-// Basic handlebar routing.
 app.get('/', function (req, res) {
-  console.log(shouldTestThis('Hans. WOW', 'Such'));
+
+  unirest.get('https://trailapi-trailapi.p.mashape.com/?lat=41.477242&limit=25&lon=-73.969283&radius=20')
+    .header('X-Mashape-Key', '[your-secret-key]') // See https://market.mashape.com/trailapi/trailapi
+    .header('Accept', 'text/plain')
+    .end(function (result) {
+      console.log(result.status, result.headers, result.body);
+    });
+
   res.render('home');
+
 });
 
 app.listen(3000, function () {
