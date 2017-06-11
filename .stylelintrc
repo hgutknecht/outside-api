@@ -1,0 +1,8 @@
+{
+  "rules": {
+    "color-no-hex": true,
+    "color-no-invalid-hex": true,
+    "value-no-vendor-prefix": true,
+    "declaration-no-important": true
+  }
+}
